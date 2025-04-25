@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  SpotifyMixUITitle, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif);
+}
+
+.hero_sec {
+    padding: 2px 0px;
+    height: 100vh;
+    width: 100%;
+}
+
+.nav_left {
+    /* margin: 10px 10px 0px 10px; */
+    gap: 10px;
+}
+
+.logo {
+    font-size: 35px;
+}
+
+.home {
+    font-size: 20px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.search {
+    border-radius: 50px;
+    color: #b3b3b3;
+    gap: 10px;
+    padding: 10px 20px;
+}
+
+.navbar {
+    justify-content: space-between;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav_right {
+    gap: 10px;
+}
+
+.nav_right button {
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 15px;
+    background-color: #ffffff;
+}
+
+.search input {
+    background-color: transparent;
+    border: none;
+    width: 350px;
+}
+
+.container {
+    width: 100%;
+    padding: 5px 10px;
+    gap: 10px;
+}
+
+.left {
+    width: 450px;
+    /* height: 100%; */
+    position: sticky;  /* Sticks in place */
+    top: 63px;
+    height: 90vh; /* Adjust the height to prevent scrolling */
+    overflow-y: hidden;
+    
+}
+
+.right {
+    width: 75%;
+    height: 100%;
+    /* padding: 20px; */
+    overflow-x: hidden;
+
+}
+
+.library {
+    position: relative;
+    height: 100%;
+    
+}
+
+.card_box_outer h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+
+
+.card_box_outer {
+    height: auto;
+    padding: 30px 20px;
+    width: 100%;
+}
+
+.artist_card_box,
+.playlist_card_box,
+.albums_card_box {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    width: 100%;
+    /* flex-wrap: wrap; */
+}
+
+.artist_card_box::-webkit-scrollbar,.playlist_card_box::-webkit-scrollbar,.albums_card_box::-webkit-scrollbar {
+    display: none;
+}
+
+/* .playlist_card_box::-webkit-scrollbar {
+    display: none;
+} */
+
+.card_class {
+    flex: 0 0 auto;
+    width: 170px;
+    min-height: 180px;
+    padding: 10px;
+    border-radius: 6px;
+    transition: all 1s linear;
+    position: relative;
+    text-align: center;
+    font-family: SpotifyMixUI, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif);
+}
+
+.card_class p {
+    color: #8f8f8f;
+}
+
+.img_div {
+    width: 150px;
+    height: 150px;
+}
+
+.img_div img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: all 0.5s linear;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.img_div_sq{
+    width: 150px;
+    height: 150px;
+    
+}
+.img_div_sq img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+    transition: all 0.5s linear;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.card_class h3 {
+    padding: 10px 0px;
+    font-size: 16px;
+    font-weight: 400;
+    text-wrap: auto;
+}
+
+.play_class {
+    background-color: #1ed760;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    color: #000000;
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.card_class:hover .play_class {
+    visibility: visible;
+    opacity: 1;
+    animation: playanim 0.5s ease-in-out 1;
+}
+
+.card_class:hover {
+    background: linear-gradient(to top, rgb(36, 36, 36), rgba(211, 211, 211, 0));
+}
+
+@keyframes playanim {
+    0% {
+        transform: translateY(30px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+.playbar{
+position: absolute;
+bottom: 0;
+left: 0;
+gap: 11px;
+width: 100%;
+
+}
+.masterposter{
+    height: 60px;
+    width: 60px;
+}
+.masterposter img{
+    height: 100%;
+    width: 100%;
+}
+
+.bar span{
+    font-size: 13px;
+    color: #8f8f8f;
+}
+.frontposter{
+    height: 145px;
+    width: 145px;
+    position: absolute;
+    bottom: -54px;
+    left: 30%;
+
+}
+.frontposter img{
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+
+}
+.backposter{
+    height: 165px;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(to bottom, #484747, rgba(255, 107, 107, 0))
+
+}
+.songitems_outer{
+    padding: 10px 0px;
+    margin: 70px 0px;
+    /* min-height: auto; */
+    overflow-y: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    height: 310px;
+    
+
+}
+.songitems_outer::-webkit-scrollbar{
+    display: none;
+}
+.list_item{
+    display: flex;
+    justify-content: space-around;
+    background-color:#000000;
+    margin: 10px 0px;
+    align-items: center;
+    border-radius: 8px;
+    
+}
+.song_poster{
+    height: 50px;
+    width: 50px;
+}
+.song_poster img{
+    height: 100%;
+    width: 100%;
+}
